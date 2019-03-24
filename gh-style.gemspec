@@ -35,6 +35,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rubocop", "~> 0.66.0"
   spec.add_dependency "rubocop-rspec", '~> 1.32', '>= 1.32.0'
+  spec.add_dependency 'solargraph'
+  spec.add_dependency "rubycritic"
+  spec.add_dependency "bump"
 
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
