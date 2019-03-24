@@ -1,0 +1,105 @@
+
+# rubocop -RSE --only 'Layout/EmptyComment' -a
+#
+# rubocop --format offenses
+# rubocop --format worst
+# rubocop --format html -o rubocop.html
+
+require: rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRailsVersion: 5.1
+  TargetRubyVersion: 2.5
+  Include:
+    - Rakefile
+    - lib/**/*.rake
+  Exclude:
+    - 'bin/**/*'
+    - 'db*/**/*'
+    - 'script/**/*'
+    - 'lib/templates/**/*'
+    - 'lib/tasks/migrate_*.rake'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - '*.gemspec'
+    - '_resources/**/*'
+
+Rails:
+  Enabled: true
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Lint/RescueException:
+  Exclude:
+    - 'lib/tasks/*.rake'
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/BlockDelimiters:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
+# Enable this to ease the transition to Ruby 3.0 where string literals will be frozen by default.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Disable Style/NumericLiterals so numbers don't need underscores
+Style/NumericLiterals:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+
+Style/Documentation:
+  Enabled: false
+
+#RSpec/AnyInstance:
+#  Enabled: false
+#
+#RSpec/Be:
+#  Enabled: false
+#
+#RSpec/DescribedClass:
+#  EnforcedStyle: explicit
+#
+#RSpec/ExampleLength:
+#  Enabled: false
+#
+#RSpec/HookArgument:
+#  EnforcedStyle: each
+#
+#RSpec/MultipleExpectations:
+#  Enabled: false
+#
+#RSpec/ImplicitExpect:
+#  EnforcedStyle: should
+#
+#RSpec/ImplicitSubject:
+#  Enabled: false
+#
+#RSpec/MessageSpies:
+#  EnforcedStyle: receive
+#
+#RSpec/NestedGroups:
+#  Enabled: false
+#
+#RSpec/NotToNot:
+#  EnforcedStyle: to_not
+#
+#RSpec/VerifiedDoubles:
+#  Enabled: false
