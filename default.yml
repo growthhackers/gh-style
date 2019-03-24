@@ -12,9 +12,6 @@ AllCops:
   DisplayStyleGuide: true
   TargetRailsVersion: 5.1
   TargetRubyVersion: 2.5
-  Include:
-    - Rakefile
-    - lib/**/*.rake
   Exclude:
     - 'bin/**/*'
     - 'db*/**/*'
