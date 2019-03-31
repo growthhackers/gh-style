@@ -22,6 +22,7 @@ AllCops:
     - 'vendor/**/*'
     - '*.gemspec'
     - '_resources/**/*'
+    - 'client/**'
 
 Rails:
   Enabled: true
