@@ -30,6 +30,9 @@ Rails:
 Bundler/OrderedGems:
   Enabled: false
 
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
 Lint/RescueException:
   Exclude:
     - 'lib/tasks/*.rake'
